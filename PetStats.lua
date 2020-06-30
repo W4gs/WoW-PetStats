@@ -16,6 +16,15 @@ function()
     local petAdLow, petAdHigh, _, _, petAdPos, petAdNeg, petAdPerc = UnitDamage("pet");
     local petArBase, petArEffArmor, petArArmor, petArPos, petArNeg = UnitArmor("pet");
     
+    -- Holds various colors used by the scripts
+    tblColors = { }
+    tblColors["Red"] = "|cFFFF0000";
+    tblColors["Yellow"] = "|cFFFFFF00";
+    tblColors["Green"] = "|cFF00FF00";
+    tblColors["Blue"] = "|cFF00D1FF";
+    tblColors["Purple"] = "|cFFC942FD";
+    tblColors["Shadow"] = "|cFFaa00ff";
+    
     tblPlayerStats = { }
     tblPlayerStats["ID"] = classID;
     tblPlayerStats["Class"] = playerClass;
