@@ -41,5 +41,9 @@ end
 
 -- Do not remove this comment, it is part of this trigger: PetStatsHunter
 function()
+    local RetVal = "";
     
+    
+    
+    return RetVal;
 end
