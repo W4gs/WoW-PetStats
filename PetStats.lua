@@ -20,5 +20,7 @@ function()
     tblPetStats["AttackSpeed"] = UnitAttackSpeed("pet");
     tblPetStats["AttackPower"] = UnitAttackPower("pet");
     tblPetStats["AttackDamage"] = UnitDamage("pet");
+    tblPetStats["PetInRange"] = UnitInRange("pet");
+    tblPetStats["PetArmor"] = UnitArmor("pet");
     
 end
