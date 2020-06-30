@@ -11,4 +11,14 @@ function()
     else
         return "";
     end
+    
+    tblPlayerStats = { }
+    tblPlayerStats["ID"] = classID;
+    tblPlayerStats["Class"] = playerClass;
+    
+    tblPetStats = { }
+    tblPetStats["AttackSpeed"] = UnitAttackSpeed("pet");
+    tblPetStats["AttackPower"] = UnitAttackPower("pet");
+    tblPetStats["AttackDamage"] = UnitDamage("pet");
+    
 end
