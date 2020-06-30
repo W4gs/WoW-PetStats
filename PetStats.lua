@@ -43,7 +43,10 @@ end
 function()
     local RetVal = "";
     
-    
+    RetVal = "Pet Stats:\n"
+    RetVal = RetVal .. "Attack Speed: " .. tblPetStats["AttackSpeed"] .. "\n";
+    RetVal = RetVal .. "Attack Power: " .. tblPetStats["AttackPower"] .. "\n";
+    RetVal = RetVal .. "Attack Damage: " .. tblPetStats["AttackLowDamage"] .. " - " .. tblPetStats["AttackHighDamage"] .. "\n";
     
     return RetVal;
 end
