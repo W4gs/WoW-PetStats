@@ -44,9 +44,9 @@ function()
     local RetVal = "";
     
     RetVal = "Pet Stats:\n"
-    RetVal = RetVal .. "Attack Speed: " .. tblPetStats["AttackSpeed"] .. "\n";
-    RetVal = RetVal .. "Attack Power: " .. tblPetStats["AttackPower"] .. "\n";
-    RetVal = RetVal .. "Attack Damage: " .. tblPetStats["AttackLowDamage"] .. " - " .. tblPetStats["AttackHighDamage"] .. "\n";
+    RetVal = RetVal .. "Attack Speed: " .. format("%.2f", tblPetStats["AttackSpeed"]) .. "\n";
+    RetVal = RetVal .. "Attack Power: " .. format("%.2f", tblPetStats["AttackPower"]) .. "\n";
+    RetVal = RetVal .. "Attack Damage: " .. format("%.2f", tblPetStats["AttackLowDamage"]) .. " - " .. format("%.2f", tblPetStats["AttackHighDamage"]) .. "\n";
     
     return RetVal;
 end
