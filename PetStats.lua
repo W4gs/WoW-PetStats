@@ -22,7 +22,8 @@ function()
     tblPetStats = { }
     tblPetStats["AttackSpeed"] = select(1, UnitAttackSpeed("pet"));
     tblPetStats["AttackPower"] = petApBase + petApPos + petApNeg;
-    tblPetStats["AttackDamage"] = UnitDamage("pet");
+    tblPetStats["AttackLowDamage"] = ((petAdLow + petAdPos + petAdNeg) * petAdPerc);
+    tblPetStats["AttackHighDamage"] = ((petAdHigh + petAdPos + petAdNeg) * petAdPerc);
     tblPetStats["PetInRange"] = UnitInRange("pet");
     tblPetStats["PetArmor"] = UnitArmor("pet");
     
