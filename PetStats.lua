@@ -1,4 +1,4 @@
--- Do not remove this comment, it is part of this trigger: ClassicGlobal
+-- Do not remove this comment, it is part of this trigger: PetStatsGlobal
 function()
     if not (WeakAuras.PetStatsNextGlobalUpdate) then
         WeakAuras.PetStatsNextGlobalUpdate = time() + 1;
@@ -28,3 +28,4 @@ function()
     tblPetStats["PetArmor"] = UnitArmor("pet");
     
 end
+
