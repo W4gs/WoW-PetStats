@@ -14,7 +14,7 @@ function()
     
     local petApBase, petApPos, petApNeg = UnitAttackPower("pet");
     local petAdLow, petAdHigh, _, _, petAdPos, petAdNeg, petAdPerc = UnitDamage("pet");
-    local petArBase, petArEffArmor, petArArmor, petArPos, petArNeg = UnitArmor(unit);
+    local petArBase, petArEffArmor, petArArmor, petArPos, petArNeg = UnitArmor("pet");
     
     tblPlayerStats = { }
     tblPlayerStats["ID"] = classID;
@@ -26,7 +26,7 @@ function()
     tblPetStats["AttackLowDamage"] = ((petAdLow + petAdPos + petAdNeg) * petAdPerc);
     tblPetStats["AttackHighDamage"] = ((petAdHigh + petAdPos + petAdNeg) * petAdPerc);
     tblPetStats["PetInRange"] = UnitInRange("pet");
-    tblPetStats["PetArmor"] = UnitArmor("pet");
-    
+    tblPetStats["PetBaseArmor"] = petArBase + petArPos + petArNeg;
+    tblPetStats["PetNowArmor"] = petArEffArmor + petArPos + petArNeg;
 end
 
