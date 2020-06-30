@@ -30,3 +30,7 @@ function()
     tblPetStats["PetNowArmor"] = petArEffArmor + petArPos + petArNeg;
 end
 
+-- Do not remove this comment, it is part of this trigger: PetStatsHunter
+function()
+    
+end
