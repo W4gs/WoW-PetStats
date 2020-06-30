@@ -14,6 +14,7 @@ function()
     
     local petApBase, petApPos, petApNeg = UnitAttackPower("pet");
     local petAdLow, petAdHigh, _, _, petAdPos, petAdNeg, petAdPerc = UnitDamage("pet");
+    local petArBase, petArEffArmor, petArArmor, petArPos, petArNeg = UnitArmor(unit);
     
     tblPlayerStats = { }
     tblPlayerStats["ID"] = classID;
