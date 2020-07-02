@@ -35,7 +35,6 @@ function()
         tblPetStats["AttackPower"] = petApBase + petApPos + petApNeg;
         tblPetStats["AttackLowDamage"] = ((petAdLow + petAdPos + petAdNeg) * petAdPerc);
         tblPetStats["AttackHighDamage"] = ((petAdHigh + petAdPos + petAdNeg) * petAdPerc);
-        tblPetStats["PetInRange"] = select(1, UnitInRange("pet"));
         tblPetStats["PetBaseArmor"] = petArBase + petArPos;
         tblPetStats["PetNowArmor"] = petArEffArmor + petArPos;
     end
@@ -47,7 +46,6 @@ function()
 
     if (UnitExists("pet") and tblPetStats) then
         RetVal = "Pet Stats:\n"
-        RetVal = "In Range: " .. tblPetStats["PetInRange"] .."\n";
         RetVal = RetVal .. "\n";
         RetVal = RetVal .. "Offensive Stats:\n";
         RetVal = RetVal .. "Attack Speed: " .. format("%.0f", tblPetStats["AttackSpeed"]) .. "\n";
