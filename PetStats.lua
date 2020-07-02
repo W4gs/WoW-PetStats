@@ -46,11 +46,15 @@ end
 -- Do not remove this comment, it is part of this trigger: PetStatsHunter
 function()
     local RetVal = "";
-    
-    RetVal = "Pet Stats:\n"
-    RetVal = RetVal .. "Attack Speed: " .. format("%.2f", tblPetStats["AttackSpeed"]) .. "\n";
-    RetVal = RetVal .. "Attack Power: " .. format("%.2f", tblPetStats["AttackPower"]) .. "\n";
-    RetVal = RetVal .. "Attack Damage: " .. format("%.2f", tblPetStats["AttackLowDamage"]) .. " - " .. format("%.2f", tblPetStats["AttackHighDamage"]) .. "\n";
+
+    if (UnitInRange("pet")) then
+        RetVal = "Pet Stats:\n"
+        RetVal = RetVal .. "Attack Speed: " .. format("%.2f", tblPetStats["AttackSpeed"]) .. "\n";
+        RetVal = RetVal .. "Attack Power: " .. format("%.2f", tblPetStats["AttackPower"]) .. "\n";
+        RetVal = RetVal .. "Attack Damage: " .. format("%.2f", tblPetStats["AttackLowDamage"]) .. " - " .. format("%.2f", tblPetStats["AttackHighDamage"]) .. "\n";
+    else
+        RetVal = "";
+    end
     
     return RetVal;
 end
