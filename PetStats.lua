@@ -45,7 +45,7 @@ end
 function()
     local RetVal = "";
 
-    if (UnitExists("pet")) then
+    if (UnitExists("pet") and tblPetStats) then
         RetVal = "Pet Stats:\n"
         RetVal = RetVal .. "Attack Speed: " .. format("%.2f", tblPetStats["AttackSpeed"]) .. "\n";
         RetVal = RetVal .. "Attack Power: " .. format("%.2f", tblPetStats["AttackPower"]) .. "\n";
