@@ -49,7 +49,7 @@ function()
         RetVal = "Pet Stats:\n"
         RetVal = RetVal .. "Attack Speed: " .. format("%.0f", tblPetStats["AttackSpeed"]) .. "\n";
         RetVal = RetVal .. "Attack Power: " .. format("%.0f", tblPetStats["AttackPower"]) .. "\n";
-        RetVal = RetVal .. "Attack Damage: " .. format("%.0f", tblPetStats["AttackLowDamage"]) .. " - " .. format("%.2f", tblPetStats["AttackHighDamage"]) .. "\n";
+        RetVal = RetVal .. "Attack Damage: " .. format("%.0f", tblPetStats["AttackLowDamage"]) .. " - " .. format("%.0f", tblPetStats["AttackHighDamage"]) .. "\n";
     else
         RetVal = "";
     end
