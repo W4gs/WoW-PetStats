@@ -14,7 +14,7 @@ function()
     
     local petApBase, petApPos, petApNeg = UnitAttackPower("pet");
     local petAdLow, petAdHigh, _, _, petAdPos, petAdNeg, petAdPerc = UnitDamage("pet");
-    local petArBase, petArEffArmor, petArArmor, petArPos, petArNeg = UnitArmor("pet");
+    local petArBase, petArEffArmor, petArArmor, petArPos = UnitArmor("pet");
     
     -- Holds various colors used by the scripts
     tblColors = { }
@@ -36,8 +36,8 @@ function()
         tblPetStats["AttackLowDamage"] = ((petAdLow + petAdPos + petAdNeg) * petAdPerc);
         tblPetStats["AttackHighDamage"] = ((petAdHigh + petAdPos + petAdNeg) * petAdPerc);
         tblPetStats["PetInRange"] = UnitInRange("pet");
-        tblPetStats["PetBaseArmor"] = petArBase + petArPos + petArNeg;
-        tblPetStats["PetNowArmor"] = petArEffArmor + petArPos + petArNeg;
+        tblPetStats["PetBaseArmor"] = petArBase + petArPos;
+        tblPetStats["PetNowArmor"] = petArEffArmor + petArPos;
     end
 end
 
