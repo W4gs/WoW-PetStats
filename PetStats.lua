@@ -47,9 +47,13 @@ function()
 
     if (UnitExists("pet") and tblPetStats) then
         RetVal = "Pet Stats:\n"
+        RetVal = RetVal .. "Offensive Stats:\n";
         RetVal = RetVal .. "Attack Speed: " .. format("%.0f", tblPetStats["AttackSpeed"]) .. "\n";
         RetVal = RetVal .. "Attack Power: " .. format("%.0f", tblPetStats["AttackPower"]) .. "\n";
         RetVal = RetVal .. "Attack Damage: " .. format("%.0f", tblPetStats["AttackLowDamage"]) .. " - " .. format("%.0f", tblPetStats["AttackHighDamage"]) .. "\n";
+        RetVal = RetVal .. "\n";
+        RetVal = RetVal .. "Defensive Stats:\n";
+        RetVal = RetVal .. "Armor: " .. format("%.0f", tblPetStats["PetNowArmor"]) .. "\n";
     else
         RetVal = "";
     end
