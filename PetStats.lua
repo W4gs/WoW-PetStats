@@ -29,7 +29,7 @@ function()
     tblPlayerStats["ID"] = classID;
     tblPlayerStats["Class"] = playerClass;
     
-    if (select(1, UnitInRange("pet"))) then
+    if (UnitExists("pet")) then
         tblPetStats = { }
         tblPetStats["AttackSpeed"] = select(1, UnitAttackSpeed("pet"));
         tblPetStats["AttackPower"] = petApBase + petApPos + petApNeg;
@@ -45,7 +45,7 @@ end
 function()
     local RetVal = "";
 
-    if (select(1, UnitInRange("pet"))) then
+    if (UnitExists("pet")) then
         RetVal = "Pet Stats:\n"
         RetVal = RetVal .. "Attack Speed: " .. format("%.2f", tblPetStats["AttackSpeed"]) .. "\n";
         RetVal = RetVal .. "Attack Power: " .. format("%.2f", tblPetStats["AttackPower"]) .. "\n";
