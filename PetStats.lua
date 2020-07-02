@@ -38,8 +38,6 @@ function()
         tblPetStats["PetInRange"] = UnitInRange("pet");
         tblPetStats["PetBaseArmor"] = petArBase + petArPos + petArNeg;
         tblPetStats["PetNowArmor"] = petArEffArmor + petArPos + petArNeg;
-    else
-        
     end
 end
 
