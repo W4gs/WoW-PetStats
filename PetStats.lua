@@ -29,14 +29,18 @@ function()
     tblPlayerStats["ID"] = classID;
     tblPlayerStats["Class"] = playerClass;
     
-    tblPetStats = { }
-    tblPetStats["AttackSpeed"] = select(1, UnitAttackSpeed("pet"));
-    tblPetStats["AttackPower"] = petApBase + petApPos + petApNeg;
-    tblPetStats["AttackLowDamage"] = ((petAdLow + petAdPos + petAdNeg) * petAdPerc);
-    tblPetStats["AttackHighDamage"] = ((petAdHigh + petAdPos + petAdNeg) * petAdPerc);
-    tblPetStats["PetInRange"] = UnitInRange("pet");
-    tblPetStats["PetBaseArmor"] = petArBase + petArPos + petArNeg;
-    tblPetStats["PetNowArmor"] = petArEffArmor + petArPos + petArNeg;
+    if (UnitInRange("pet")) then
+        tblPetStats = { }
+        tblPetStats["AttackSpeed"] = select(1, UnitAttackSpeed("pet"));
+        tblPetStats["AttackPower"] = petApBase + petApPos + petApNeg;
+        tblPetStats["AttackLowDamage"] = ((petAdLow + petAdPos + petAdNeg) * petAdPerc);
+        tblPetStats["AttackHighDamage"] = ((petAdHigh + petAdPos + petAdNeg) * petAdPerc);
+        tblPetStats["PetInRange"] = UnitInRange("pet");
+        tblPetStats["PetBaseArmor"] = petArBase + petArPos + petArNeg;
+        tblPetStats["PetNowArmor"] = petArEffArmor + petArPos + petArNeg;
+    else
+        
+    end
 end
 
 -- Do not remove this comment, it is part of this trigger: PetStatsHunter
